@@ -25,15 +25,15 @@ int main()
 {
     int n;
     float avg_tt = 0, avg_wt = 0, total_tt = 0, total_wt = 0;
-    cout << "\n Nhập số lượng phần tử: ";
+    cout << "\nNhap so luong phan tu: ";
     cin >> n;
     process p[100];
     for (int i = 0; i < n; i++)
     {
-        cout << "\nQuá trình: " << i + 1 << "\n";
-        cout << "\nThời điểm đến: ";
+        cout << "\nQua trinh: " << i + 1 << "\n";
+        cout << "\nThoi diem den: ";
         cin >> p[i].a_time;
-        cout << "\nThời gian CPU: ";
+        cout << "\nThoi gian CPU: ";
         cin >> p[i].b_time;
         p[i].pid = i + 1;
 
@@ -54,14 +54,14 @@ int main()
     avg_wt = (total_wt / n);
     avg_tt = (total_tt / n);
     //sort(p, p + n, compare2);
-    cout << "\nPID\t\tAT\t\tBT\t\tTAT\t\tWT";
+    cout << "\nID\tThoi diem den\t\tThoi gian CPU\t\tThoi gian xoay\t\tThoi gian cho";
     for (int i = 0; i < n; i++)
     {
-        cout << "\n" << p[i].pid << "\t\t" << p[i].a_time << "\t\t" << p[i].b_time << "\t\t" << p[i].t_time << "\t\t" << p[i].w_time;
+        cout << "\n" << p[i].pid << "\t\t" << p[i].a_time << "\t\t\t" << p[i].b_time << "\t\t\t" << p[i].t_time << "\t\t\t" << p[i].w_time;
 
     }
-    cout << "\nThời gian chờ trung bình: " << avg_wt;
-    cout << "\nThời gian xoay vòng: " << avg_tt;
+    cout << "\nThoi gian cho trung binh: " << avg_wt;
+    cout << "\nThoi gian xoay vong: " << avg_tt;
     return 0;
 }
 
@@ -80,5 +80,4 @@ int main()
 1 1
 2 2
 3 1
-4 5
 */
