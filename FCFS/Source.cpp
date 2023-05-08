@@ -25,7 +25,7 @@ int main()
 {
     int n;
     float avg_tt = 0, avg_wt = 0, total_tt = 0, total_wt = 0;
-    cout << "\n Nhap so luong phan tu: ";
+    cout << "\n Nhập số lượng phần tử: ";
     cin >> n;
     process p[100];
     for (int i = 0; i < n; i++)
