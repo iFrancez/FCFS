@@ -31,7 +31,8 @@ int main()
 	process p[100];
 	for (int i = 0; i < n; i++)
 	{
-		cout << "\nQua trinh: " << i + 1 << "\n";
+		//mã màu cam
+		cout << "\n\x1b[33mQua trinh P\x1b[0m" << "\x1b[33m"<<i + 1 <<"\x1b[0m" << "\n";
 		cout << "\nThoi diem den: ";
 		cin >> p[i].a_time;
 		cout << "\nThoi gian CPU: ";
