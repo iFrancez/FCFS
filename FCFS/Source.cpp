@@ -73,7 +73,7 @@ int main()
 	}
 	cout << p[n - 1].w_time;
 	cout << " / " << n << " = " << avg_wt;
-	cout << "\n\x1b[33mThoi gian xoay vong:\x1b[0m ";
+	cout << "\n\x1b[33mThoi gian xoay vong trung binh:\x1b[0m ";
 	for (int i = 0; i < n - 1; i++) {
 		cout << p[i].t_time << " + ";
 	}
