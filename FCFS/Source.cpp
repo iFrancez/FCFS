@@ -14,14 +14,6 @@ struct process
 	int r_time;
 
 };
-static bool compare(process a, process b)
-{
-	return a.a_time < b.a_time;
-}
-static bool compare2(process a, process b)
-{
-	return a.pid < b.pid;
-}
 int main()
 {
 	int n;
@@ -40,7 +32,6 @@ int main()
 		p[i].pid = i + 1;
 
 	}
-	//sort(p, p + n, compare);
 	for (int i = 0; i < n; i++)
 	{
 		p[i].s_time = (i == 0) ? p[i].a_time : p[i - 1].c_time;
@@ -55,15 +46,12 @@ int main()
 	}
 	avg_wt = (total_wt / n);
 	avg_tt = (total_tt / n);
-	//sort(p, p + n, compare2);
 	cout << "\t\t\t+----+---------------+---------------+---------------+---------------+\n";
-	//cout << "| ID | Thoi diem den | Thoi gian CPU | Thoi gian xoay| Thoi gian cho |\n";
 	cout << "\t\t\t| \x1b[33mID\x1b[0m | \x1b[33mThoi diem den\x1b[0m | \x1b[33mThoi gian CPU\x1b[0m | \x1b[33mThoi gian xoay\x1b[0m| \x1b[33mThoi gian cho\x1b[0m |\n";
 
 	cout << "\t\t\t+----+---------------+---------------+---------------+---------------+\n";
 	for (int i = 0; i < n; i++)
 	{
-		//cout << "\n" << p[i].pid << "\t\t" << p[i].a_time << "\t\t\t" << p[i].b_time << "\t\t\t" << p[i].t_time << "\t\t\t" << p[i].w_time;
 		cout << "\t\t\t| " << setw(2) << p[i].pid << " | " << setw(13) << p[i].a_time << " | " << setw(13) << p[i].b_time << " | " << setw(13) << p[i].t_time << " | " << setw(13) << p[i].w_time << " |\n";
 	}
 	cout << "\t\t\t+----+---------------+---------------+---------------+---------------+\n";
